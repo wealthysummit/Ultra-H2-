@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonies</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+        
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2rem;
+        }
+        
+        .video-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .video-item {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+        
+        .video-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-item iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .video-item h3 {
+            margin-bottom: 0.5rem;
+            color: #1e3a8a;
+        }
+        
+        .video-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Testimonies</h1>
+    </header>
+
+    <main class="video-list">
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+            <h3>Customer A</h3>
+            <p>"Amazing service and fast delivery!"</p>
+        </div>
+
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+            <h3>Customer B</h3>
+            <p>"Highly recommend. Quality products!"</p>
+        </div>
+
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/MS42I_19wgQ" allowfullscreen></iframe>
+            <h3>Customer C</h3>
+            <p>"Exceptional experience from start to finish."</p>
+        </div>
+    </main>
+</body>
+
+</html>
