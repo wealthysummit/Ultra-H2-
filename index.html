@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Ultra H2 Molecular Water</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+        }
+        
+        header {
+            background: #005f99;
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+            transition: background 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+        
+        .hero {
+            background: url('img/he.png') center/cover no-repeat;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-flex {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .section-flex img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        
+        .text {
+            flex: 1;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 8px;
+        }
+        
+        .testimonials {
+            background: #f4f4f4;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .testimonial {
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+        }
+        
+        .testimonial .name {
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        
+        footer {
+            background: #005f99;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        @media(max-width:768px) {
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Ultra H2</div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About H₂</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Ultra H2 Molecular Water – Harness the Power of H₂</h1>
+    </section>
+
+    <main>
+        <section id="about">
+            <div class="section-flex">
+                <img src="img/cobond.png" alt="Molecular structure">
+                <div class="text">
+                    <h2>What Is Hydrogen?</h2>
+                    <p>Hydrogen is a colorless, odorless, tasteless, highly flammable element. As H₂, it is the simplest and most abundant element—making up ~75% of normal matter. Under standard conditions, it forms H₂ (dihydrogen), composed of two atoms
+                        bonded covalently.</p>
+                    <p><strong>Diatomic H₂ Characteristics:</strong></p>
+                    <ul>
+                        <li>Covalent bond: atoms share electrons.</li>
+                        <li>Stable and less reactive than free atoms.</li>
+                        <li>Simple structure: just two atoms.</li>
+                    </ul>
+                    <p>On Earth, H₂ rarely exists free—it's found combined as water or organic compounds, due to its reactivity and lightness which causes it to escape the atmosphere.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits">
+            <div class="section-flex">
+                <div class="text">
+                    <h2>Benefits of H₂ in the Human Body</h2>
+                    <ul>
+                        <li><strong>Hydration:</strong> As part of H₂O, hydrogen is vital for cellular hydration and toxin removal.</li>
+                        <li><strong>Anti-aging:</strong> Hydrogen helps slow ageing processes.</li>
+                        <li><strong>Deep cellular absorption:</strong> It's absorbed and dispersed deeply like IV medicine.</li>
+                        <li><strong>Antioxidant:</strong> Small H₂ molecules counter mitochondrial oxidative stress, supporting energy metabolism.</li>
+                        <li><strong>Essential element:</strong> 90% of atoms in the body are hydrogen.</li>
+                    </ul>
+                </div>
+                <img src="img/h2.png" alt="Athlete drinking water">
+            </div>
+        </section>
+
+        <section id="video">
+            <h2 style="text-align:center; margin-bottom:1rem;">Learn More About Ultra H₂</h2>
+            <div class="video-container">
+                <iframe src="img/utH201.mp4" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2 style="text-align:center; margin-bottom:1rem;">What People Are Saying</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>“Since I switched to Ultra H₂, my energy levels are off the charts and post-workout recovery is so much quicker.”</p>
+                    <div class="name">— Alex Morgan, Athlete</div>
+                </div>
+                <div class="testimonial">
+                    <p>“My skin feels more hydrated, I feel sharper—I can’t believe this is just water!”</p>
+                    <div class="name">— Priya Sharma, Entrepreneur</div>
+                </div>
+                <div class="testimonial">
+                    <p>“I feel the difference in my body’s response—Ultra H₂ is next‑level hydration.”</p>
+                    <div class="name">— Dr. James Lee, Nutritionist</div>
+                </div>
+                <div class="testimonial more"><a href="" style="width:400px; height: 150px; background-color:blue; color:#f4f4f4;border-radius:20px; text-decoration:none;">Live Testimonise of Affected Persons</a></div>
+            </div>
+        </section>
+    </main>
+    <button style="height:50px; position:fixed; right:50px; bottom:70px; color:red; border:1px solid red; border-radius:10px;">
+        <p>MORE ON ULTRA H2,<br> molecular hydrogen generator</p>
+    </button>
+
+    <footer>
+        <p>&copy; 2025 Ultra H₂ • Pure. Powerful. Hydrated.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
