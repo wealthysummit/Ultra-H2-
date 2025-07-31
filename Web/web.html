@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultra H2 Webinar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+        
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px 10px;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        
+        .countdown {
+            margin: 30px auto;
+            font-size: 2rem;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-section {
+            display: none;
+            margin: 30px auto;
+            max-width: 90%;
+        }
+        
+        video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #003366;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to the Ultra H2 Webinar</h1>
+        <p>Learn how hydrogen water can transform your health</p>
+    </header>
+
+    <div class="countdown" id="countdown">
+        Next session starts in: <span id="timer">Loading...</span>
+    </div>
+
+    <div class="video-section" id="videoSection">
+        <video id="webinarVideo" autoplay muted controls>
+    <source src="your-ultra-h2-video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+    </div>
+
+    <footer>
+        &copy; 2025 Ultra H2 | For more info call: +234-XXX-XXX-XXXX
+    </footer>
+
+    <script>
+        function getNextSessionTime() {
+            const now = new Date();
+            const today10 = new Date(now);
+            today10.setHours(11, 20, 0, 0);
+
+            const today20 = new Date(now);
+            today20.setHours(20, 0, 0, 0);
+
+            if (now < today10) return today10;
+            else if (now < today20) return today20;
+
+            // If past both times, set for tomorrow 10AM
+            const tomorrow10 = new Date(now);
+            tomorrow10.setDate(now.getDate() + 1);
+            tomorrow10.setHours(10, 0, 0, 0);
+            return tomorrow10;
+        }
+
+        function updateCountdown() {
+            const now = new Date();
+            const sessionTime = getNextSessionTime();
+            const diff = sessionTime - now;
+
+            if (diff <= 0) {
+                document.getElementById('countdown').style.display = 'none';
+                document.getElementById('videoSection').style.display = 'block';
+                document.getElementById('webinarVideo').play();
+                return;
+            }
+
+            const hours = String(Math.floor(diff / 1000 /
+                        if (diff <= 0) {
+                            document.getElementById('countdown').style.display = 'none';
+                            document.getElementById('videoSection').style.display = 'block';
+                            document.getElementById('webinarVideo').play();
+                            return;
+                        }
+
+                        const hours = String(Math.floor(diff / 1000 / 60 / 60)).padStart(2, '0');
+                        const minutes = String(Math.floor((diff / 1000 / 60) % 60)).padStart(2, '0');
+                        const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+
+                        document.getElementById('timer').textContent = `${hours}:${minutes}:${seconds}`;
+                    }
+
+                    // Update countdown every second
+                    setInterval(updateCountdown, 1000); updateCountdown();
+    </script>
+
+</body>
+
+</html>

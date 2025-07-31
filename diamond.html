@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Diamond Project</title>
+    <style>
+         :root {
+            --primary-color: #f4ad07;
+            --secondary-color: #ffffff;
+            --accent-color: #0d47a1;
+            --bg-color: #000000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--secondary-color);
+            background: var(--bg-color);
+        }
+        
+        header.hero {
+            background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        header.hero h1 {
+            font-size: 3rem;
+            color: #fff;
+        }
+        
+        header.hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        
+        .btn-group {
+            margin-top: 20px;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            margin: 5px;
+            border: none;
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-color);
+        }
+        
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .about {
+            text-align: center;
+            margin: 0 60px;
+        }
+        
+        .pillars {
+            text-align: center;
+        }
+        
+        .pillars h2 {
+            padding: 20px 0 30px 0;
+            margin: 10px 0 20px 0;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .pillar {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .pillar h3 {
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+        
+        .video-section,
+        .testimonies {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .video-section iframe,
+        .testimonies iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 315px;
+        }
+        
+        .testimonies {
+            flex-wrap: wrap;
+        }
+        
+        footer {
+            background: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header.hero h1 {
+                font-size: 2.2rem;
+            }
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <h1>The Diamond Project</h1>
+        <p>A project that seek to help individuals live out their through potential and become the ultimate (best) version of them self.
+        </p>
+        <div class="btn-group">
+            <button class="btn" onclick="location.href='booking.html'">Join Now</button>
+            <button class="btn" onclick="location.href='more.html'">Learn More</button>
+        </div>
+    </header>
+
+    <!-- ABOUT US -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>
+            The Diamond Project is a movement focused on transforming lives through mentorship, training, capacity building and building financial leverage system. Our vision is to raise financially free people who will in turn raise other financially free people,
+            who collectively uses their resources to Affect the world positively. Our mission is raise 50,000 Diamonds and ursher in the next world changes .
+            <br> In this project we are working together to acheive a common goal, Which are.
+            <br> * Financial freedom , * Health freedom and * Time freedom
+        </p>
+
+
+    </section>
+
+    <!-- PILLARS -->
+
+    <section class="pillars">
+
+        <h2>The Pillars of Diamond Project</h2>
+
+        <div class="container">
+
+            <div class="pillar">
+                <h3>MENTORSHIP, TRAINING AND CAPACITY BUILDING</h3>
+                <p>Cultivate your skills and expand your horizons through expert guidance and tailored training programs. Our mentors are industry leaders committed to nurturing your potential and igniting your path to success.</p>
+            </div>
+            <div class="pillar">
+                <h3>DISCIPLINE, REGMENTATION AND STOICISM</h3>
+                <p>Harness the power of discipline and stoic principles to fortify your mindset and conquer challenges with unwavering resolve. Our structured approach instills resilience, perseverance, and a steadfast commitment to excellence.</p>
+            </div>
+            <div class="pillar">
+                <h3>HEALTH OPTIMIZATION THROUGH NUTRITION SUPPLIMENTATION AND LIFESTYLE CHANGES</h3>
+                <p>Elevate your well-being with comprehensive health optimization strategies. From personalized nutrition plans to targeted supplementation and lifestyle modifications, we empower you to thrive physically, mentally, and emotionally.</p>
+            </div>
+            <div class="pillar">
+                <h3>DEEP UNDERSTANDING OF LEVERAGE AND BUILDING FINANCIAL LEVERAGE SYSTEM</h3>
+                <p>Gain a profound understanding of leverage and unlock the keys to financial abundance. Learn how to strategically amplify your resources, maximize returns, and build sustainable wealth through innovative financial leverage systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO VIDEO -->
+    <section class="video-section">
+        <h2>Watch Our Introduction</h2>
+        <iframe src="https://www.youtube.com/embed/5qap5aO4i9A" title="Diamond Project Intro Video" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- TESTIMONIES -->
+    <section class="testimonies">
+        <h2>What People Say</h2>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Testimony 1" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/V-_O7nl0Ii0" title="Testimony 2" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="join">
+        <p>Ready to make an impact?</p>
+        <button class="btn" onclick="location.href='booking.html'">Join The Project</button>
+        <p style="margin-top: 20px;">&copy; 2025 The Diamond Project. All rights reserved.</p>
+        <!-- <div>
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">YouTube</a>
+        </div> -->
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra H2 Webinar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px 15px;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            margin-top: 8px;
+        }
+        
+        .countdown {
+            margin: 30px auto;
+            font-size: 1.8rem;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-section {
+            display: none;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+        
+        video {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            margin-top: 50px;
+            background: #003366;
+            color: white;
+            padding: 20px 10px;
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .countdown {
+                font-size: 1.5rem;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to the Ultra H2 Webinar</h1>
+        <p>Discover how hydrogen water can change your health</p>
+    </header>
+
+    <div class="countdown" id="countdown">
+        Next session starts in: <span id="timer">Loading...</span>
+    </div>
+
+    <div class="video-section" id="videoSection">
+        <video id="webinarVideo" unmute controls playsinline>
+  <source src="img/richultra.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+    </div>
+
+    <footer>
+        &copy; 2025 Ultra H2 | Call us: +234-XXX-XXX-XXXX | Visit: www.ultrah2webinar.com
+    </footer>
+
+    <script>
+        function getNextSessionTime() {
+            const now = new Date();
+
+            const today11_30 = new Date(now);
+            today11_30.setHours(11, 40, 0, 0);
+
+            const today20_00 = new Date(now);
+            today20_00.setHours(20, 0, 0, 0);
+
+            if (now < today11_30) return today11_30;
+            if (now < today20_00) return today20_00;
+
+            const tomorrow11_30 = new Date(now);
+            tomorrow11_30.setDate(now.getDate() + 1);
+            tomorrow11_30.setHours(11, 40, 0, 0);
+            return tomorrow11_30;
+        }
+
+        const countdownEl = document.getElementById("countdown");
+        const timerEl = document.getElementById("timer");
+        const videoSection = document.getElementById("videoSection");
+        const video = document.getElementById("webinarVideo");
+
+        function updateCountdown() {
+            const now = new Date();
+            const sessionTime = getNextSessionTime();
+            const diff = sessionTime - now;
+
+            if (diff <= 0) {
+                countdownEl.style.display = "none";
+                videoSection.style.display = "block";
+
+                // Attempt to play the video
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Autoplay blocked, user interaction required.");
+                        // Optionally show a play button
+                    });
+                }
+                return;
+            }
+
+            const hrs = String(Math.floor(diff / 1000 / 60 / 60)).padStart(2, '0');
+            const mins = String(Math.floor((diff / 1000 / 60) % 60)).padStart(2, '0');
+            const secs = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+
+            timerEl.textContent = `${hrs}:${mins}:${secs}`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+
+
+</body>
+
+</html>

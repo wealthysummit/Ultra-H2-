@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Popup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Button */
+        
+        .open-btn {
+            margin: 100px auto;
+            display: block;
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        /* Overlay */
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        /* Popup Form */
+        
+        .popup {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .popup h2 {
+            margin-top: 0;
+        }
+        
+        .popup input,
+        .popup textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .popup button.submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #aaa;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 500px) {
+            .popup {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="open-btn" onclick="openPopup()">Open Form</button>
+
+    <div class="overlay" id="popupOverlay">
+        <div class="popup">
+            <button class="close-btn" onclick="closePopup()">&times;</button>
+            <h2>Contact Us</h2>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button class="submit">Send</button>
+        </div>
+    </div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdf_-Meyb_fnSqA7Lfms0_IH9rc62JOlk89ru7T5W2tOZdCQQ/viewform?embedded=true" width="640" height="853" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    <script>
+        function openPopup() {
+            document.getElementById('popupOverlay').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+        }
+
+        // Optional: Close popup on outside click
+        window.addEventListener('click', function(e) {
+            const popup = document.getElementById('popupOverlay');
+            if (e.target === popup) {
+                closePopup();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

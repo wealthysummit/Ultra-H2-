@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | The Diamond Project</title>
+    <style>
+         :root {
+            --primary-color: #0d0d0d;
+            --accent-color: #0072ff;
+            --bg-light: #f9f9f9;
+            --text-dark: #222;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(to right, #0072ff, #00c6ff);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .vision,
+        .mission {
+            background-color: white;
+            border-left: 5px solid var(--accent-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .carousel-container {
+            background-color: #fff;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 10px;
+        }
+        
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .carousel img {
+            height: 80px;
+            scroll-snap-align: start;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            flex: 0 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .carousel img {
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>The Diamond Project</h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>About Us</h2>
+            <p>
+                The Diamond Project is a transformative initiative designed to help individuals live out their true potential and become the ultimate version of themselves. Through structured mentorship, professional training, capacity building, and the creation of sustainable
+                financial leverage systems, we empower individuals to take control of their destinies.
+            </p>
+        </section>
+
+        <section>
+            <h2>Our Origin</h2>
+            <p>
+                Sponsored by <strong>Century 21 Freedom Group International</strong>, a non-governmental initiative focused on human capacity and economic empowerment, the Diamond Project was born out of the desire to raise a new breed of leaders capable
+                of shaping a better world.
+            </p>
+        </section>
+
+        <section class="vision">
+            <h2>Our Vision</h2>
+            <p>
+                To raise financially free people who will raise other financially free people, who will then use their resources collectively to affect the world positively.
+            </p>
+        </section>
+
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>
+                To raise <strong>50,000 Diamonds</strong> and usher in the next generation of world changers.
+            </p>
+        </section>
+
+        <section>
+            <h2>Our Partners</h2>
+            <p>We work with amazing organizations that align with our vision. Here are a few of them:</p>
+            <div class="carousel-container">
+
+                <!-- Replace with actual logo URLs -->
+                <!-- Inside the existing <div class="carousel"> -->
+                <div class="carousel">
+                    <!-- Empowered Consumer Logo -->
+                    <img src="https://empoweredconsumer.org/wp-content/uploads/2021/11/empoweredconsumerlogo.svg" alt="Empowered Consumer Logo">
+
+                    <!-- Weider Global Nutrition Logo -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Weider_Logo.svg/2560px-Weider_Logo.svg.png" alt="Weider Global Nutrition Logo">
+
+                    <!-- Access Bank Logo -->
+                    <img src="https://seeklogo.com/images/A/access-bank-plc-logo-6972DE41C1-seeklogo.com.png" alt="Access Bank Logo">
+
+                    <!-- DSM Logo -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/DSM_Company_Logo.svg/2560px-DSM_Company_Logo.svg.png" alt="DSM Logo">
+
+                    <!-- Standard Organization of Nigeria Logo -->
+                    <img src="https://www.son.gov.ng/wp-content/uploads/2020/03/SON-LOGO-1.png" alt="SON Logo">
+
+                    <!-- Nature’s Way Logo -->
+                    <img src="https://www.naturesway.com/themes/naturesway/images/naturesway-logo.svg" alt="Nature's Way Logo">
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+</body>
+
+</html>

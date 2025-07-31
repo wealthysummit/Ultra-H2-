@@ -1,0 +1,28 @@
+Deployment successfully updated.
+Version 1 on Jul 30, 2025, 3:14 AM
+Deployment ID
+AKfycbwUpiCfxbSNmCDtfuuuPY4qo749U-VfP477Uj4h2ymx83Iu34Hb9-leRw0DoW2m5La9ow
+
+AKfycbwUpiCfxbSNmCDtfuuuPY4qo749U-VfP477Uj4h2ymx83Iu34Hb9-leRw0DoW2m5La9ow
+
+Web app
+URL
+https://script.google.com/macros/s/AKfycbwUpiCfxbSNmCDtfuuuPY4qo749U-VfP477Uj4h2ymx83Iu34Hb9-leRw0DoW2m5La9ow/exec
+
+
+
+
+
+
+
+
+
+Deployment successfully updated.
+Version 1 on Jul 31, 2025, 4:29 AM
+Deployment ID
+AKfycbyV4PmypGfupacGVLW2ZZySFTA10yI7NFfA5EV7egr1tgcbZra6OQ_u8hCRcMz6jN-6jw
+Web app
+URL
+https://script.google.com/macros/s/AKfycbyV4PmypGfupacGVLW2ZZySFTA10yI7NFfA5EV7egr1tgcbZra6OQ_u8hCRcMz6jN-6jw/exec
+
+Empowering entrepreneurs through vision, strategy, and sustainable impact.
