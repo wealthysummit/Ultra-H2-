@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra H2 Molecular Generator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background: url('img/big.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: rgba(0, 0, 50, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        button {
+            background: #00c896;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        .popup-form {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form-box {
+            background: #fff;
+            color: #000;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+        }
+        
+        .form-box input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .form-box button {
+            background: #0077cc;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Ultra H₂ Molecular Generator</h1>
+        <p>To know more about the Ultra H₂ Generator and its amazing health benefits, click the button below to download a free PDF with full scientific details.</p>
+        <button onclick="openForm()">Download PDF</button>
+    </div>
+
+    <div class="popup-form" id="popupForm">
+        <div class="form-box">
+            <h2>Get Your Free PDF</h2>
+            <form id="ultraH2Form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <input type="text" name="state" placeholder="Your State" required>
+                <button type="submit">Download Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.getElementById("popupForm");
+
+        function openForm() {
+            popup.style.display = "flex";
+        }
+
+        document.getElementById("ultraH2Form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            // Replace this URL with your actual Google Apps Script URL
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyR903dSoTQii0ChF_9g-qIz3VG2BJDX_bKPp5AUn_YSDQixSJ2NxIjvX7FLNFJc37ZOg/exec';
+            const formData = new FormData(this);
+
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    alert("Success! Your PDF will now download.");
+                    popup.style.display = "none";
+                    window.location.href = "img/Ultra h2.pdf"; // Replace with actual download link
+                })
+                .catch(error => alert('Error submitting form'));
+        });
+    </script>
+
+</body>
+
+</html>

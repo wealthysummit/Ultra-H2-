@@ -117,6 +117,7 @@
             <h2 id="formTitle">Subscribe</h2>
             <form id="subscribeForm">
                 <input type="text" id="name" placeholder="Your Full Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
                 <input type="tel" id="phone" placeholder="Phone Number" required>
                 <input type="hidden" id="sessionType">
                 <button type="submit">Submit & Continue</button>
@@ -126,7 +127,7 @@
     </div>
 
     <script>
-        const scriptURL = "https://script.google.com/macros/s/AKfycbwOEwYQi-9jv-mqDtHkkmIuepEe30XcgTv1VapF6bEU/dev"; // Replace with your Apps Script Web App URL
+        const scriptURL = "https://script.google.com/macros/s/AKfycbw4P3YBAlJ05rc0u5uNdXhrA22mFcrGcJQVIPkd2oslyqqH95PSAw29gbs4iuUs9dDHaQ/exec"; // Replace with your Apps Script Web App URL
 
         function openForm(type) {
             document.getElementById('modalForm').style.display = 'flex';
@@ -143,6 +144,7 @@
 
             const data = {
                 name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
                 sessionType: document.getElementById('sessionType').value
             };
